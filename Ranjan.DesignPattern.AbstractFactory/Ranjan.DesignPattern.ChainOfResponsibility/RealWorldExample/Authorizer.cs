@@ -1,17 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Ranjan.DesignPattern.ChainOfResponsibility.RealWorldExample
+﻿namespace Ranjan.DesignPattern.ChainOfResponsibility.RealWorldExample
 {
-    public abstract class Authorizer
+    public abstract class Authorizer : IAuthorizerChain
     {
-        protected Authorizer successor;
+        protected IAuthorizerChain successor;
 
-        public void SetSuccessor(Authorizer authorizer)
+        public void SetSuccessor(IAuthorizerChain authorizer)
         {
             successor = authorizer;
         }
+
+        public void ProcessHandler(AuthorizeRequest request)
+        {
+            if (ShouldHandle(request))
+            {
+                HandleAuthorization(request);
+            }
+
+            successor?.ProcessHandler(request);
+        }
+
+        protected virtual bool ShouldHandle(AuthorizeRequest request) => true;
 
         public abstract void HandleAuthorization(AuthorizeRequest request);
     }

@@ -1,6 +1,7 @@
-﻿using System;
-using Ranjan.DesignPattern.ChainOfResponsibility.ConceptExample;
+﻿using Ranjan.DesignPattern.ChainOfResponsibility.ConceptExample;
 using Ranjan.DesignPattern.ChainOfResponsibility.RealWorldExample;
+using System;
+using System.Collections.Generic;
 
 namespace Ranjan.DesignPattern.ChainOfResponsibility
 {
@@ -39,13 +40,46 @@ namespace Ranjan.DesignPattern.ChainOfResponsibility
             Console.ReadKey();
         }
 
+        //public static void RunRealWorldExample()
+        //{
+        //    Authorizer releasedClientAuthorizer = new ReleasedClientAuthorizer();
+        //    Authorizer releasedContractorAuthorizer = new ReleasedContractorAuthorizer();
+
+        //    //a1.SetSuccessor(a2);
+        //    releasedContractorAuthorizer.SetSuccessor(releasedClientAuthorizer);
+
+        //    AuthorizeRequest releaseClientRequest = new AuthorizeRequest
+        //    {
+        //        AuthorizeType = AuthorizeTypes.ReleasedClient,
+        //        OrganizationName = "ReleasedClientOrgName"
+        //    };
+
+        //    releasedContractorAuthorizer.HandleAuthorization(releaseClientRequest);
+
+
+        //    AuthorizeRequest releaseContractorRequest = new AuthorizeRequest
+        //    {
+        //        AuthorizeType = AuthorizeTypes.ReleasedContractor,
+        //        OrganizationName = "ReleasedContractorOrgName"
+        //    };
+
+        //    releasedContractorAuthorizer.HandleAuthorization(releaseContractorRequest);
+        //}
+
         public static void RunRealWorldExample()
         {
-            Authorizer releasedClientAuthorizer = new ReleasedClientAuthorizer();
-            Authorizer releasedContractorAuthorizer = new ReleasedContractorAuthorizer();
+            var authorizerChain = new IAuthorizerChain []
+            {
+                new ReleasedClientAuthorizer(),
+                new ReleasedContractorAuthorizer()
+            };
 
-            //a1.SetSuccessor(a2);
-            releasedContractorAuthorizer.SetSuccessor(releasedClientAuthorizer);
+            for (int i = 0; i < authorizerChain.Length - 1; i++)
+            {
+                var test = authorizerChain[i];
+                var test2 = authorizerChain[i + 1];
+                test.SetSuccessor(test2);
+            }
 
             AuthorizeRequest releaseClientRequest = new AuthorizeRequest
             {
@@ -53,16 +87,24 @@ namespace Ranjan.DesignPattern.ChainOfResponsibility
                 OrganizationName = "ReleasedClientOrgName"
             };
 
-            releasedContractorAuthorizer.HandleAuthorization(releaseClientRequest);
+            //Authorizer releasedClientAuthorizer = new ReleasedClientAuthorizer();
+            //Authorizer releasedContractorAuthorizer = new ReleasedContractorAuthorizer();
 
+            ////a1.SetSuccessor(a2);
+            //releasedContractorAuthorizer.SetSuccessor(releasedClientAuthorizer);
 
-            AuthorizeRequest releaseContractorRequest = new AuthorizeRequest
-            {
-                AuthorizeType = AuthorizeTypes.ReleasedContractor,
-                OrganizationName = "ReleasedContractorOrgName"
-            };
+            //releasedContractorAuthorizer.ProcessHandler(releaseClientRequest);
 
-            releasedContractorAuthorizer.HandleAuthorization(releaseContractorRequest);
+            //AuthorizeRequest releaseContractorRequest = new AuthorizeRequest
+            //{
+            //    AuthorizeType = AuthorizeTypes.ReleasedContractor,
+            //    OrganizationName = "ReleasedContractorOrgName"
+            //};
+
+            //releasedContractorAuthorizer.ProcessHandler(releaseContractorRequest);
+
+            authorizerChain[0].ProcessHandler(releaseClientRequest);
+       
         }
     }
 }

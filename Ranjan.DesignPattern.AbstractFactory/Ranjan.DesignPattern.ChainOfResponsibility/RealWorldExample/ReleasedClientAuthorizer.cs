@@ -4,16 +4,21 @@ namespace Ranjan.DesignPattern.ChainOfResponsibility.RealWorldExample
 {
     public class ReleasedClientAuthorizer : Authorizer
     {
-        public override void HandleAuthorization(AuthorizeRequest request)
+        protected override bool ShouldHandle(AuthorizeRequest request)
         {
             if (request.AuthorizeType == AuthorizeTypes.ReleasedClient)
             {
-                Console.WriteLine($"{this.GetType().Name} handled the authorization for organization {request.OrganizationName}");
+                return true;
             }
-            else
-            {
-                successor?.HandleAuthorization(request);
-            }
+
+            return false;
+        }
+
+        public override void HandleAuthorization(AuthorizeRequest request)
+        {
+
+            Console.WriteLine(
+                $"{this.GetType().Name} handled the authorization for organization {request.OrganizationName}");
         }
     }
 }
