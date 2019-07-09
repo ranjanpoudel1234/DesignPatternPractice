@@ -5,7 +5,17 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.AbstractFactory", "Ranjan.DesignPattern.AbstractFactory\Ranjan.DesignPattern.AbstractFactory.csproj", "{153856D3-7B4E-49C9-A6BD-5198C9899853}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ranjan.DesignPattern.ChainOfResponsibility", "Ranjan.DesignPattern.ChainOfResponsibility\Ranjan.DesignPattern.ChainOfResponsibility.csproj", "{211616D6-0FC8-46A0-9225-DF18F6F8ED54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.ChainOfResponsibility", "Ranjan.DesignPattern.ChainOfResponsibility\Ranjan.DesignPattern.ChainOfResponsibility.csproj", "{211616D6-0FC8-46A0-9225-DF18F6F8ED54}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.Builder", "Ranjan.DesignPattern.Builder\Ranjan.DesignPattern.Builder.csproj", "{BC7A5D82-D174-4200-9EF5-53657BB8C885}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.Strategy", "Ranjan.DesignPattern.Strategy\Ranjan.DesignPattern.Strategy.csproj", "{B8C24BA7-CF55-4DD4-8B3B-E00B7F91EC27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.Adapter", "Ranjan.DesignPattern.Adapter\Ranjan.DesignPattern.Adapter.csproj", "{88C66AFE-338D-46DC-AB4B-4153A9DC12C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.Visitor", "Ranjan.DesignPattern.Visitor\Ranjan.DesignPattern.Visitor.csproj", "{5E29F6A6-A1DD-4764-AFA1-30D1C583E949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ranjan.DesignPattern.Decorator", "Ranjan.DesignPattern.Decorator\Ranjan.DesignPattern.Decorator.csproj", "{5F1DB284-E1E7-4E4B-A6BC-E9CE1EF3052F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +31,26 @@ Global
 		{211616D6-0FC8-46A0-9225-DF18F6F8ED54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{211616D6-0FC8-46A0-9225-DF18F6F8ED54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{211616D6-0FC8-46A0-9225-DF18F6F8ED54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC7A5D82-D174-4200-9EF5-53657BB8C885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7A5D82-D174-4200-9EF5-53657BB8C885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7A5D82-D174-4200-9EF5-53657BB8C885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7A5D82-D174-4200-9EF5-53657BB8C885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C24BA7-CF55-4DD4-8B3B-E00B7F91EC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C24BA7-CF55-4DD4-8B3B-E00B7F91EC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C24BA7-CF55-4DD4-8B3B-E00B7F91EC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C24BA7-CF55-4DD4-8B3B-E00B7F91EC27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88C66AFE-338D-46DC-AB4B-4153A9DC12C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C66AFE-338D-46DC-AB4B-4153A9DC12C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C66AFE-338D-46DC-AB4B-4153A9DC12C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C66AFE-338D-46DC-AB4B-4153A9DC12C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E29F6A6-A1DD-4764-AFA1-30D1C583E949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E29F6A6-A1DD-4764-AFA1-30D1C583E949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E29F6A6-A1DD-4764-AFA1-30D1C583E949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E29F6A6-A1DD-4764-AFA1-30D1C583E949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F1DB284-E1E7-4E4B-A6BC-E9CE1EF3052F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F1DB284-E1E7-4E4B-A6BC-E9CE1EF3052F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F1DB284-E1E7-4E4B-A6BC-E9CE1EF3052F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F1DB284-E1E7-4E4B-A6BC-E9CE1EF3052F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

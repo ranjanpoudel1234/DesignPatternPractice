@@ -76,9 +76,7 @@ namespace Ranjan.DesignPattern.ChainOfResponsibility
 
             for (int i = 0; i < authorizerChain.Length - 1; i++)
             {
-                var test = authorizerChain[i];
-                var test2 = authorizerChain[i + 1];
-                test.SetSuccessor(test2);
+                authorizerChain[i].SetSuccessor(authorizerChain[i + 1]);
             }
 
             AuthorizeRequest releaseClientRequest = new AuthorizeRequest
