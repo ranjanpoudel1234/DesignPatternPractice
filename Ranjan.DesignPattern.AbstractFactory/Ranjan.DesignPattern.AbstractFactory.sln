@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.Adapte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.Visitor", "Ranjan.DesignPattern.Visitor\Ranjan.DesignPattern.Visitor.csproj", "{5E29F6A6-A1DD-4764-AFA1-30D1C583E949}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ranjan.DesignPattern.Decorator", "Ranjan.DesignPattern.Decorator\Ranjan.DesignPattern.Decorator.csproj", "{5F1DB284-E1E7-4E4B-A6BC-E9CE1EF3052F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.Decorator", "Ranjan.DesignPattern.Decorator\Ranjan.DesignPattern.Decorator.csproj", "{5F1DB284-E1E7-4E4B-A6BC-E9CE1EF3052F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.Singleton", "Ranjan.DesignPattern.Singleton\Ranjan.DesignPattern.Singleton.csproj", "{866A55AE-5211-4A0E-B15A-2D2EC208F9A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ranjan.TPL.Dataflow", "Ranjan.TPL.Dataflow\Ranjan.TPL.Dataflow.csproj", "{C804786E-207E-4EC2-8453-E366A439850C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{5F1DB284-E1E7-4E4B-A6BC-E9CE1EF3052F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F1DB284-E1E7-4E4B-A6BC-E9CE1EF3052F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F1DB284-E1E7-4E4B-A6BC-E9CE1EF3052F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866A55AE-5211-4A0E-B15A-2D2EC208F9A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866A55AE-5211-4A0E-B15A-2D2EC208F9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866A55AE-5211-4A0E-B15A-2D2EC208F9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866A55AE-5211-4A0E-B15A-2D2EC208F9A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C804786E-207E-4EC2-8453-E366A439850C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C804786E-207E-4EC2-8453-E366A439850C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C804786E-207E-4EC2-8453-E366A439850C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C804786E-207E-4EC2-8453-E366A439850C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
