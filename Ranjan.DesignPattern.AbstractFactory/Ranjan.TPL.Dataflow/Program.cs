@@ -17,9 +17,10 @@ namespace Ranjan.TPL.Dataflow
             //DataFlowExceptionHandling.ShowFirstStyleofHandlingException();
            // DataFlowExceptionHandling.RunCompletionTaskForHandlingException();
            // WriteToAndReadMessageFromADataflowBlock.RunBufferBlockExample();
-            WriteToAndReadMessageFromADataflowBlock.RunBroadCastBlockExample();
-            WriteToAndReadMessageFromADataflowBlock.RunWriteOnceBlockExample();
-
+           // WriteToAndReadMessageFromADataflowBlock.RunBroadCastBlockExample();
+          //  WriteToAndReadMessageFromADataflowBlock.RunWriteOnceBlockExample();
+            //  DegreeOfParallelism.DegreeOfParallelismExample();
+            JoinBlockToReadDataFromMultipleSources.RunExample();
 
 
             Console.ReadKey();

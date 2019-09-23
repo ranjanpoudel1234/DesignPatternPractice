@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.Decora
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.Singleton", "Ranjan.DesignPattern.Singleton\Ranjan.DesignPattern.Singleton.csproj", "{866A55AE-5211-4A0E-B15A-2D2EC208F9A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ranjan.TPL.Dataflow", "Ranjan.TPL.Dataflow\Ranjan.TPL.Dataflow.csproj", "{C804786E-207E-4EC2-8453-E366A439850C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.TPL.Dataflow", "Ranjan.TPL.Dataflow\Ranjan.TPL.Dataflow.csproj", "{C804786E-207E-4EC2-8453-E366A439850C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ranjan.TPL.DataParallelism", "Ranjan.TPL.DataParallelism\Ranjan.TPL.DataParallelism.csproj", "{4EDBAF78-EA53-43FB-AF31-B2E45101AD31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{C804786E-207E-4EC2-8453-E366A439850C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C804786E-207E-4EC2-8453-E366A439850C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C804786E-207E-4EC2-8453-E366A439850C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EDBAF78-EA53-43FB-AF31-B2E45101AD31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EDBAF78-EA53-43FB-AF31-B2E45101AD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EDBAF78-EA53-43FB-AF31-B2E45101AD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EDBAF78-EA53-43FB-AF31-B2E45101AD31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,6 +7,19 @@ using System.Threading.Tasks.Dataflow;
 
 namespace Ranjan.TPL.Dataflow
 {
+    //Every ActionBlock<TInput>, TransformBlock<TInput, TOutput>, and TransformManyBlock<TInput, TOutput> object 
+    //buffers input messages until the block is ready to process them. 
+    //By default, these classes process messages in the order in which they are received, one message at a time.
+    //You can also specify the degree of parallelism
+
+    //By default, each predefined dataflow block propagates out messages in the order in which the messages are received.
+    //Although multiple messages are processed simultaneously when you specify a maximum degree of parallelism that is greater than 1, 
+    //they are still propagated out in the order in which they are received.
+
+    //Because the MaxDegreeOfParallelism property represents the maximum degree of parallelism, 
+    //the dataflow block might execute with a lesser degree of parallelism than you specify. 
+    //The dataflow block can use a lesser degree of parallelism to meet its functional requirements or to account for a lack of available system resources. 
+    //A dataflow block never chooses a greater degree of parallelism than you specify.
     public class MainDataFlowConsoleExample
     {
         public static void RunConsoleExample()
