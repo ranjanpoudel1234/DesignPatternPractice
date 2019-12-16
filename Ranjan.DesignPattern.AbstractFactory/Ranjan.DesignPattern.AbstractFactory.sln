@@ -21,7 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.DesignPattern.Single
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.TPL.Dataflow", "Ranjan.TPL.Dataflow\Ranjan.TPL.Dataflow.csproj", "{C804786E-207E-4EC2-8453-E366A439850C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ranjan.TPL.DataParallelism", "Ranjan.TPL.DataParallelism\Ranjan.TPL.DataParallelism.csproj", "{4EDBAF78-EA53-43FB-AF31-B2E45101AD31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.TPL.DataParallelism", "Ranjan.TPL.DataParallelism\Ranjan.TPL.DataParallelism.csproj", "{4EDBAF78-EA53-43FB-AF31-B2E45101AD31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ranjan.TPL.TaskBasedAsyncProgramming", "Ranjan.TPL.TaskBasedAsyncProgramming\Ranjan.TPL.TaskBasedAsyncProgramming.csproj", "{4F0D5DCA-3E2D-4B9C-A9B7-66DE6CDFBA32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ranjan.Threading.Channels", "Ranjan.Threading.Channels\Ranjan.Threading.Channels.csproj", "{43D29AD0-2A11-4608-B0E8-DB7657887D8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{4EDBAF78-EA53-43FB-AF31-B2E45101AD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EDBAF78-EA53-43FB-AF31-B2E45101AD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EDBAF78-EA53-43FB-AF31-B2E45101AD31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F0D5DCA-3E2D-4B9C-A9B7-66DE6CDFBA32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F0D5DCA-3E2D-4B9C-A9B7-66DE6CDFBA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F0D5DCA-3E2D-4B9C-A9B7-66DE6CDFBA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F0D5DCA-3E2D-4B9C-A9B7-66DE6CDFBA32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D29AD0-2A11-4608-B0E8-DB7657887D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D29AD0-2A11-4608-B0E8-DB7657887D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D29AD0-2A11-4608-B0E8-DB7657887D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D29AD0-2A11-4608-B0E8-DB7657887D8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
