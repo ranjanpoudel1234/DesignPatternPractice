@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq.Expressions;
+using AgileObjects.ReadableExpressions;
 
 namespace Ranjan.CSharp.Expressions
 {
@@ -7,7 +8,7 @@ namespace Ranjan.CSharp.Expressions
     {
         public static void Main(string[] args)
         {
-            //expressions
+            //1.expressions
             var name = "Ranjan";
             Console.WriteLine(RegularGreetingFunction(name));
 
@@ -15,7 +16,7 @@ namespace Ranjan.CSharp.Expressions
             Console.WriteLine(getGreetingFunction(name));
 
 
-            //statements like Console.WriteLine
+            //2.statements like Console.WriteLine
             var statementBlock = Statements.CreateStatementBlock();
             var lambda = Expression.Lambda<Action>(statementBlock).Compile();
             lambda();
@@ -23,6 +24,16 @@ namespace Ranjan.CSharp.Expressions
             var statementBlockWithVariables = Statements.CreateStatementBlockWithVariables();
             var lambdaWithVariables = Expression.Lambda<Action>(statementBlockWithVariables).Compile();
             lambdaWithVariables();
+
+
+            //3.expressions as readable code using ReadableExpression nuget package.
+            var thisIsNotReadableDuringDebug = statementBlock.ToString();
+            var thisIsReadableDuringDebug = statementBlock.ToReadableString();
+
+            var moreNonReadableStatementBlock = statementBlockWithVariables.ToString();
+            var moreReadbleStatementBlock = statementBlockWithVariables.ToReadableString();
+
+            ComplexExpressionReadability();
 
 
             Console.ReadKey();
@@ -70,11 +81,50 @@ namespace Ranjan.CSharp.Expressions
             // Ternary conditional
             var conditional = Expression.Condition(condition, trueClause, falseClause);
 
+            var notTooReadable = conditional.ToString();
+            var easilyReadable = conditional.ToReadableString();
+
             //To evaluate expression, we have to create an entry point by wrapping everything in a lambda expression.
             //To turn it into an actual lambda, we can call Compile which will produce a delegate that we can invoke.
             var lambda = Expression.Lambda<Func<string, string>>(conditional, personNameParameter);
 
             return lambda.Compile();
+        }
+
+        public static void ComplexExpressionReadability()
+        {
+            var nArgument = Expression.Parameter(typeof(int), "n");
+            var result = Expression.Variable(typeof(int), "result");
+
+            // Creating a label that represents the return value
+            LabelTarget label = Expression.Label(typeof(int));
+
+            var initializeResult = Expression.Assign(result, Expression.Constant(1));
+
+            // This is the inner block that performs the multiplication,
+            // and decrements the value of 'n'
+            var block = Expression.Block(
+                Expression.Assign(result,
+                    Expression.Multiply(result, nArgument)),
+                Expression.PostDecrementAssign(nArgument)
+            );
+
+            // Creating a method body.
+            BlockExpression body = Expression.Block(
+                new[] { result },
+                initializeResult,
+                Expression.Loop(
+                    Expression.IfThenElse(
+                        Expression.GreaterThan(nArgument, Expression.Constant(1)),
+                        block,
+                        Expression.Break(label, result)
+                    ),
+                    label
+                )
+            );
+
+            var notReadble = body.ToString();
+            var easilyReadable = body.ToReadableString();
         }
     }
 }
