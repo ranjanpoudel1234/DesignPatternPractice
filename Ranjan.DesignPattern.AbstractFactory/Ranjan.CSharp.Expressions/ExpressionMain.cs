@@ -8,7 +8,7 @@ namespace Ranjan.CSharp.Expressions
     {
         public static void Main(string[] args)
         {
-            //1.expressions
+            // 1.expressions
             var name = "Ranjan";
             Console.WriteLine(RegularGreetingFunction(name));
 
@@ -16,7 +16,8 @@ namespace Ranjan.CSharp.Expressions
             Console.WriteLine(getGreetingFunction(name));
 
 
-            //2.statements like Console.WriteLine
+            // 2.statements like Console.WriteLine
+            // dynamically compile code that contains multiple statements
             var statementBlock = Statements.CreateStatementBlock();
             var lambda = Expression.Lambda<Action>(statementBlock).Compile();
             lambda();
@@ -26,7 +27,7 @@ namespace Ranjan.CSharp.Expressions
             lambdaWithVariables();
 
 
-            //3.expressions as readable code using ReadableExpression nuget package.
+            // 3.expressions as readable code using ReadableExpression nuget package.
             var thisIsNotReadableDuringDebug = statementBlock.ToString();
             var thisIsReadableDuringDebug = statementBlock.ToReadableString();
 
@@ -35,6 +36,9 @@ namespace Ranjan.CSharp.Expressions
 
             ComplexExpressionReadability();
 
+
+            // 4. Optimizing reflection Calls.
+            Benchmarks.RunBenchMark();
 
             Console.ReadKey();
         }
